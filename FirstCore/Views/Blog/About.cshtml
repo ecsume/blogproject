@@ -1,0 +1,45 @@
+﻿@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@model FirstCore.Models.Hakkimda
+
+<link href="~/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="~/vendor/bootstrap/js/bootstrap.min.js"></script>
+<script src="~/vendor/bootstrap/js/bootstrap.js"></script>
+<link rel="stylesheet" type="text/css" href="~/css/contact.css" />
+<!------ Include the above in your HEAD tag ---------->
+<link href="~/vendor/about.css" rel="stylesheet" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+@*<div class="row mt-5">
+    <div class="aboutus-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 col-sm-6 col-md-12" style="text-align: justify;">
+                    <h4>Hakkımda</h4>
+                    <p>@Model.hakkimda </p>
+                    @*<p class="aboutus-text">This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem</p>
+                        <a class="aboutus-more" href="#">Daha fazla</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>*@
+<!-- Add icon library -->
+
+
+<div class="card">
+    <img src="~/image/elif.jpg" alt="Elif" style="width:100%">
+    <h1>Elif Süme</h1>
+    <p class="title">Developer, İstanbul</p>
+    <p>@Model.hakkimda</p>
+    <a class="socialButtons" href="https://twitter.com/elifcsume"><i class="fa fa-twitter"></i></a>
+    <a class="socialButtons" href="https://www.linkedin.com/in/elif-s%C3%BCme-94582a164/"><i class="fa fa-linkedin"></i></a>
+    <a class="socialButtons" href="https://www.facebook.com/elifclik?ref=bookmarks"><i class="fa fa-facebook"></i></a>
+    <p><button> <a href="~/Blog/Contact">İletişim</a></button></p>
+</div>
+
+
+
+

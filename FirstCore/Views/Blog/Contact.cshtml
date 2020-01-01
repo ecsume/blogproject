@@ -1,0 +1,68 @@
+﻿@model FirstCore.Models.Iletisim
+@{
+    ViewData["Title"] = "Contact";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<link href="~/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="~/vendor/bootstrap/js/bootstrap.min.js"></script>
+<script src="~/vendor/bootstrap/js/bootstrap.js"></script>
+<link rel="stylesheet" type="text/css" href="~/css/contact.css" />
+<!------ Include the above in your HEAD tag ---------->
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+            <div class="well well-sm">
+                @using (@Html.BeginForm("ContactPost", "Blog", FormMethod.Post))
+                {
+                    <fieldset>
+                        <legend class="text-center">İletişim</legend>
+
+                        <!-- Name input-->
+                        <div class="form-group">
+                            <label class="col-md-3 control-label" for="name">Ad</label>
+                            <div class="col-md-9">
+                                @Html.TextBoxFor(x => x.Ad, new { value = "", placeholder = "Adınız...", @class = "form-control" })
+
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-3 control-label" for="name">Soyad</label>
+                            <div class="col-md-9">
+                                @Html.TextBoxFor(x => x.Soyad, new { value = "", placeholder = "Soyadınız...", @class = "form-control" })
+
+                            </div>
+                        </div>
+
+                        <!-- Email input-->
+                        <div class="form-group">
+                            <label class="col-md-3 control-label" for="email">E-mail</label>
+                            <div class="col-md-9">
+                                @Html.TextBoxFor(x => x.Mail, new { value = "", placeholder = "Mailiniz...", @class = "form-control" })
+
+                            </div>
+                        </div>
+
+                        <!-- Message body -->
+                        <div class="form-group">
+                            <label class="col-md-3 control-label" for="message">Mesajınız</label>
+                            <div class="col-md-9">
+                                @Html.TextAreaFor(x => x.Mesaj, new { value = "", placeholder = "Mesajınızı yazınız...", @class = "form-control", rows = "5" })
+
+                            </div>
+                        </div>
+
+                        <!-- Form actions -->
+                        <div class="form-group">
+                            <div class="col-md-12 text-right">
+                                <button type="submit" class="btn btn-primary btn-lg">Gönder</button>
+                            </div>
+                        </div>
+                    </fieldset>
+
+                }
+            </div>
+        </div>
+    </div>
+</div>
